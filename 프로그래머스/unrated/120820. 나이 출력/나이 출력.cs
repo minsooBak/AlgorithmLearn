@@ -5,6 +5,6 @@ public class Solution {
         if(age <= 0 && age > 120)
             return 0;
         
-        return 2023 - age;
+        return (2022 - age) + 1;
     }
 }
