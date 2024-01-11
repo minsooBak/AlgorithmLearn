@@ -2,7 +2,7 @@ using System;
 
 public class Solution {
     public int solution(int angle) {
-        if(angle <= 0 && angle > 180)
+        if(angle <= 0 || angle > 180)
             return 0;
         
         if(angle < 90)
