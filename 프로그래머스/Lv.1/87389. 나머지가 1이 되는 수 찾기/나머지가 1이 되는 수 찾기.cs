@@ -7,7 +7,7 @@ public class Solution {
         {
             for(int i = 1; i <= n; i++)
             {
-                answer = ((n % i) != 0) ? ((n % i) < answer ? n % i : answer) : answer;
+                answer = n % i;
                 if(answer == 1)
                     return i;
             }
