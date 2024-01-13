@@ -1,9 +1,16 @@
 public class Solution {
     public int solution(string s) {
-        var str = s.Split("-");
-        if(str.Length == 2)
-            return int.Parse(str[1]) * -1;
+        var c = s.ToCharArray();
+        int answer = 0;
+        s = "";
         
-        return int.Parse(str[0]);
+        if(c[0] == '+' || c[0] == '-')
+            answer = 1;
+        
+        for(int i = answer; i < c.Length; i++)
+            s += c[i];
+
+        answer = int.Parse(s); 
+        return c[0] == '-' ? answer * -1 : answer;
     }
 }
