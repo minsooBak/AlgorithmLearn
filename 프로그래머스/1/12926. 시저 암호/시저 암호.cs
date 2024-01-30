@@ -16,7 +16,7 @@ public class Solution {
                else if(c <= 'z')
                {
                    temp = c + n;
-                   if(temp > 'z') temp = ('a' - 1) + (temp - 'z');
+                   if(temp > 'z') temp = ('a' - 1) + (temp - 'z'); 
                }
                answer += Convert.ToChar(temp);
            }
