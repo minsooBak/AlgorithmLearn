@@ -35,15 +35,17 @@ public class Solution {
             }else
             {
                 str += c;
-                char a = StringToNumber(str);
-                if(a != ' ')
+                if(str.Length >= 3)
                 {
-                    answer += a;
-                    str = "";
+                    char a = StringToNumber(str);
+                    if(a != ' ')
+                    {
+                        answer += a;
+                        str = "";
+                    }
                 }
             }
         }
         return int.Parse(answer);
     }
 }
-
