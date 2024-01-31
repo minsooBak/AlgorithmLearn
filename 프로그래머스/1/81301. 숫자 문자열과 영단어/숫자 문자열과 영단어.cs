@@ -26,11 +26,6 @@ public class Solution {
         {
             if(c < 'a' || c > 'z')
             {
-                if(str != "")
-                {
-                    answer += StringToNumber(str);
-                    str = "";
-                }
                  answer += c;
             }else
             {
