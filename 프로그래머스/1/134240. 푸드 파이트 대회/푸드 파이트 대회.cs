@@ -1,13 +1,13 @@
 using System;
-using System.Text;
+using System.Collections.Generic;
 
 public class Solution {
     
-    private const int MAXSIZE = 500;
+    private const int MAXSIZE = 4500;
     
     public string solution(int[] food) {
         string answer = "";
-        StringBuilder sb = new StringBuilder(MAXSIZE);
+        List<int> result = new List<int>(MAXSIZE);
         
         for(int i = 1; i < food.Length; i++)
         {
@@ -16,15 +16,14 @@ public class Solution {
             {
                 for(int j = 0; j < sum; j++)
                 {
-                    sb.Append(i);
+                    result.Add(i);
                 }
-                answer += sb.ToString();
-                sb.Clear();
             }
         }
-        char[] str = answer.ToCharArray();
-        Array.Reverse(str);
-        answer = $"{answer}0{new string(str)}";
+        answer = String.Join("", result);
+        answer += "0";
+        result.Reverse();
+        answer += String.Join("", result);
         return answer;
     }
 }
