@@ -3,7 +3,7 @@ using System.Text;
 
 public class Solution {
     
-    private const int MAXSIZE = 1000;
+    private const int MAXSIZE = 500;
     
     public string solution(int[] food) {
         string answer = "";
