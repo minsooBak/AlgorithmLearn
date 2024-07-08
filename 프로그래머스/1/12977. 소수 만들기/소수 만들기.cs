@@ -17,7 +17,7 @@ class Solution
                 {
                     int result = sum + nums[k];
                     bool isCheck = true;
-                    for(int r = 2; r < result / 2; ++r)
+                    for(int r = 2; r * r <= result; ++r)
                     {
                        if(result % r == 0)
                        {
