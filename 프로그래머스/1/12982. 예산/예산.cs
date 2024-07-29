@@ -17,16 +17,15 @@ public class Solution {
             }
         }
         
-        int sum = 0;
         int k = 0;
-        while(sum <= budget && k < size)
+        while(0 < budget && k < size)
         {
-            sum += d[k++];
-            ++answer;
+            budget -= d[k++];
+            if(budget >= 0)
+                ++answer;
+            else
+                break;
         }
-        
-        if(sum > budget)
-            --answer;
         
         return answer;
     }
